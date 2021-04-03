@@ -51,6 +51,14 @@ a {
   text-decoration: none;
 }
 
+input {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-right: 2.4rem;
+}
+
 /* ****************************************** */
 
 /* ***UTILITY CLASSES*** */
@@ -154,16 +162,12 @@ section.hero .input-group {
 }
 
 section.hero .input-group input {
-  outline: none;
-  font-size: 16px;
   width: 100%;
   height: 6rem;
   padding: 2rem 0 2rem 5.6rem;
-  margin-right: 2.4rem;
-  border-radius: 8px;
 }
 
-section.hero .input-group svg {
+section.hero .input-group img {
   position: absolute;
   top: 50%;
   left: 2.5rem;
@@ -249,6 +253,92 @@ section.exchange .exchange-image picture, section.exchange .exchange-image img {
   width: 100%;
 }
 
+/* ***************************************************** */
+
+/* ***FOOTER*** */
+footer .container{
+  background: var(--secondaryColor);
+  background-image: url(/assets/img/Union-alt.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  color: #FAF8EB;
+  padding: 6rem 9.6rem 5rem;
+}
+
+footer h3 {
+  font-size: 32px;
+}
+
+footer p {
+  font-size: 16px;
+}
+
+footer .summary {
+  width: 40%;
+}
+
+footer .summary .info {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3.2rem;
+}
+
+footer .summary h3 {
+  margin-bottom: 3.2rem;
+}
+
+footer .summary p {
+  margin-left: 2rem;
+  line-height: 2em;
+}
+
+footer .summary a {
+  color: #FAF8EB;
+  line-height: 16px;
+}
+
+footer .newsletter {
+  width: 50%;
+}
+
+footer .newsletter h3 {
+  margin-bottom: 1.6rem;
+}
+
+footer .newsletter p {
+  line-height: 2em;
+  margin-bottom: 1.6rem;
+}
+
+footer .newsletter .input-group {
+  margin-bottom: 1.6rem;
+}
+
+footer .newsletter input {
+  display: inline-block;
+  padding: 21px 24px;
+  margin-bottom: 2.4rem;
+  height: 66px;
+  width: 66%;
+}
+
+footer .newsletter button {
+  width: 29%;
+  border-radius: 8px;
+  height: 66px;
+  font-size: 1.2em;
+  color: var(--primaryColor);
+  background: var(--active);
+}
+
+footer .newsletter a {
+  margin-right: 5.8rem;
+}
+
+footer .newsletter a:hover img{
+  transition: 0.3s all;
+  transform: scale(1.05);
+}
 
 /* ***************************************************** */
 
@@ -257,6 +347,7 @@ section.exchange .exchange-image picture, section.exchange .exchange-image img {
 /* ***LARGE TABLETS*** */
 
 @media screen and (max-width: 1200px) { 
+  /* ***hero section*** */
   section.hero h1 {
     width: 90%;
   }
@@ -266,17 +357,27 @@ section.exchange .exchange-image picture, section.exchange .exchange-image img {
   }
 }
 
+@media screen and (max-width: 992px) {
+  /* ***variables*** */
+  :root {
+    --font: 14px;
+  }
+
+  /* ***footer*** */
+  footer .container{
+    padding: 6rem 4rem 5rem;
+  }
+}
+
 /* ***SMALL TABLETS*** */
 
 @media screen and (max-width: 768px) {
-  /* variables */
+  /* ***variables*** */
   :root {
     --font: 12px;
   }
 
-  /* ******** */
-
-  /* hero section for mobile view */
+  /* ***hero section for mobile view*** */
   section.hero h1 {
     width: 100%;
   }
@@ -303,7 +404,7 @@ section.exchange .exchange-image picture, section.exchange .exchange-image img {
     height: 4.8rem;
   }
 
-  /*  */
+  /* ***book collection section*** */
   section.collection .collection-text {
     padding: 6.4rem 3.2rem 4.8rem;
     width: 100%;
@@ -315,6 +416,7 @@ section.exchange .exchange-image picture, section.exchange .exchange-image img {
     width: 100%;
   } 
 
+  /* ***book exchange section*** */
   section.exchange .exchange-text {
     padding: 6.4rem 3.2rem 4.8rem;
     width: 100%;
@@ -325,19 +427,35 @@ section.exchange .exchange-image picture, section.exchange .exchange-image img {
   section.exchange .exchange-image {
     width: 100%;
   } 
+
+  /* ***footer*** */
+  footer .container{
+    padding: 5.6rem 3.2rem 4rem;
+  }
+
+  footer .summary, footer .newsletter {
+    width: 100%;
+  }
+
+  footer .newsletter input {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  footer .newsletter button {
+    width: 73%;
+  }
 }
 
 /* ***SMALL SCREENS*** */
 
 @media screen and (max-width: 576px) {
-  /* variables */
+  /* ***variables*** */
   :root {
     --font: 10px;
   }
-
-  /* ******** */
   
-  /* header for mobile view */
+  /* ***header for mobile view*** */
   header nav {
     position: absolute;
     width: 100%;
@@ -389,9 +507,7 @@ section.exchange .exchange-image picture, section.exchange .exchange-image img {
     animation: slide 0.5s forwards;
   }
 
-  /* ******* */
-
-  /* hero section for mobile view */
+  /* ***hero section for mobile view*** */
   section.hero h1 {
     font-size: 3.2em;
     width: calc(100vw - 6.4rem);
