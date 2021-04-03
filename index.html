@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>XYZ Bookstore</title>
+</head>
+<body>
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- logo -->
+            <a href="index.html">    
+                <div class="logo">
+                    <img src="assets/img/logo.png" alt="logo">
+                </div>
+            </a>
+
+            <!-- hamburger icon -->
+            <div class="hamburger d-md-none py-5">
+                <img src="assets/img/menu.svg" alt="menu" class="d-md-none">
+            </div>
+
+            <nav class="d-none d-md-block">
+                <!-- icon to close the navigation in mobile view -->
+                <img src="assets/img/close.svg" alt="close button" class="close-btn d-md-none">
+
+                <!-- navigation links -->
+                <div class="navigation d-md-flex">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="">Book Exchange</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Sign In</a></li>
+                    <li><a href="">Register</a></li>
+
+                    <a href="#">
+                        <!-- favorite icon -->
+                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.8375 1.5C16.3836 1.49954 16.9242 1.6081 17.4278 1.81931C17.9313 2.03052 18.3877 2.34014 18.77 2.73C19.5578 3.52979 19.9994 4.60737 19.9994 5.73C19.9994 6.85264 19.5578 7.93022 18.77 8.73L11 16.5975L3.23001 8.73C2.4422 7.93022 2.00061 6.85264 2.00061 5.73C2.00061 4.60737 2.4422 3.52979 3.23001 2.73C3.61258 2.34042 4.06895 2.03096 4.57245 1.81972C5.07595 1.60848 5.6165 1.49968 6.16251 1.49968C6.70853 1.49968 7.24908 1.60848 7.75258 1.81972C8.25608 2.03096 8.71245 2.34042 9.09501 2.73L11 4.68L12.8975 2.745C13.2787 2.35049 13.7355 2.0369 14.2407 1.82298C14.7458 1.60906 15.2889 1.49921 15.8375 1.5ZM15.8375 2.01214e-06C15.0917 -0.000630028 14.3533 0.147643 13.6656 0.436128C12.9779 0.724614 12.3547 1.1475 11.8325 1.68L11 2.52L10.1675 1.68C9.64473 1.14846 9.02136 0.726309 8.33376 0.438145C7.64615 0.149981 6.90806 0.00157307 6.16251 0.00157307C5.41697 0.00157307 4.67888 0.149981 3.99127 0.438145C3.30367 0.726309 2.6803 1.14846 2.15751 1.68C1.09392 2.76272 0.497986 4.21977 0.497986 5.7375C0.497986 7.25523 1.09392 8.71228 2.15751 9.795L11 18.75L19.8425 9.795C20.9061 8.71228 21.502 7.25523 21.502 5.7375C21.502 4.21977 20.9061 2.76272 19.8425 1.68C19.3199 1.14818 18.6966 0.725734 18.0089 0.437298C17.3213 0.148862 16.5832 0.000207074 15.8375 2.01214e-06Z"/>
+                        </svg>                            
+                        <span class="d-md-none">Favourites</span>
+                    </a>
+
+                    <a href="#">
+                        <!-- cart icon -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21 7.5H3V21C3 21.3978 3.15804 21.7794 3.43934 22.0607C3.72064 22.342 4.10218 22.5 4.5 22.5H19.5C19.8978 22.5 20.2794 22.342 20.5607 22.0607C20.842 21.7794 21 21.3978 21 21V7.5ZM1.5 6V21C1.5 21.7956 1.81607 22.5587 2.37868 23.1213C2.94129 23.6839 3.70435 24 4.5 24H19.5C20.2956 24 21.0587 23.6839 21.6213 23.1213C22.1839 22.5587 22.5 21.7956 22.5 21V6H1.5Z"/>
+                            <path d="M12 2.25C11.0054 2.25 10.0516 2.64509 9.34835 3.34835C8.64509 4.05161 8.25 5.00544 8.25 6H6.75C6.75 4.60761 7.30312 3.27226 8.28769 2.28769C9.27226 1.30312 10.6076 0.75 12 0.75C13.3924 0.75 14.7277 1.30312 15.7123 2.28769C16.6969 3.27226 17.25 4.60761 17.25 6H15.75C15.75 5.00544 15.3549 4.05161 14.6517 3.34835C13.9484 2.64509 12.9946 2.25 12 2.25Z"/>
+                        </svg>
+                        <span class="d-md-none">Cart</span>
+                    </a>
+                </div>
+            </nav>
+        </div>       
+    </header>
+
+    <main>
+        <!-- hero section -->
+        <section class="hero">
+            <div class="container">
+
+                <!-- all the hero text -->
+                <div class="hero-text">
+                    <h1 class="text-left text-md-center">We are a bookshop that exist for the lovers of paper backs</h1>
+                    <p class="text-left text-md-center">We have a large collection of books that spans across varying categories. So feel free and search our bookshelf, we definitely have your book</p>
+                    
+                    <div class="form-group d-flex flex-column flex-md-row">
+                        <div class="input-group">
+                            <!-- search icon -->
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.75 19.6895L15.086 14.0255C16.4471 12.3915 17.1258 10.2956 16.981 8.17392C16.8361 6.05222 15.8789 4.06804 14.3084 2.63413C12.7379 1.20023 10.675 0.427001 8.54893 0.47531C6.42284 0.523618 4.39723 1.38974 2.89347 2.8935C1.38971 4.39726 0.523588 6.42288 0.475279 8.54896C0.42697 10.6751 1.2002 12.7379 2.6341 14.3084C4.06801 15.8789 6.05219 16.8362 8.17389 16.981C10.2956 17.1258 12.3914 16.4471 14.0255 15.086L19.6895 20.75L20.75 19.6895ZM1.99996 8.75C1.99996 7.41497 2.39585 6.10993 3.13754 4.9999C3.87924 3.88986 4.93345 3.0247 6.16685 2.51381C7.40025 2.00292 8.75745 1.86924 10.0668 2.12969C11.3762 2.39014 12.5789 3.03302 13.5229 3.97702C14.4669 4.92103 15.1098 6.12376 15.3703 7.43314C15.6307 8.74251 15.497 10.0997 14.9862 11.3331C14.4753 12.5665 13.6101 13.6207 12.5001 14.3624C11.39 15.1041 10.085 15.5 8.74996 15.5C6.96036 15.498 5.24463 14.7862 3.97919 13.5208C2.71375 12.2553 2.00195 10.5396 1.99996 8.75Z" fill="#A6A28A"/>
+                            </svg>
+                                
+                            <input type="text" placeholder="Search here">
+                        </div>
+
+                        <button type="submit" class="btn">Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- collection section -->
+        <section class="collection">
+            <div class="container-fluid d-flex flex-column flex-md-row-reverse">
+                <div class="collection-text">
+                    <h2>Our Collection</h2>
+                    <p>We have some of the best books in our collection, from new releases to old and evergreen texts. Why don’t you go through them we are certain you’d find a book just for you.</p>
+                    <a href="#">Browse Categories <img src="assets/img/double-chevron.svg" alt=""></a>
+                </div>
+
+                <div class="collection-image">
+                    <!-- picture tag for responsive images -->
+                    <picture>
+                        <source srcset="assets/img/bg2-sm.png" media="(max-width: 576px)">
+                        <source srcset="assets/img/bg2.png">    
+                        <img src="assets/img/bg2.png" alt="background-2">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <!-- book exchange section -->
+        <section class="exchange">
+            <div class="container-fluid d-flex flex-column flex-md-row">
+                <div class="exchange-text">
+                    <h2>Our Collection</h2>
+                    <p>We have this wonderful program that allows you to turn in your old books for some cash, we in turn give these books back to communities in need.</p>
+                    
+                    <a href="#">Learn More <img src="assets/img/double-chevron.svg" alt=""></a>
+                </div>
+
+                <div class="exchange-image">
+                    <!-- picture tag for responsive images -->
+                    <picture>
+                        <source srcset="assets/img/bg3-sm.png" media="(max-width: 576px)">
+                        <source srcset="assets/img/bg3.png">    
+                        <img src="assets/img/bg3.png" alt="background-2">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+/* ***XYZ BOOKSTORE - DESIGNED BY AY GABI AND DEVELOPED BY FERANMI*** */
+
+/* ***VARIABLES*** */
+:root {
+  /* color */
+  --primaryColor: #FAF8EB;
+  --secondaryColor: #0E1712;
+  --active: #376A75;
+  --alt-text: #476253;
+  --muted: #476253;
+
+
+  /* fonts */
+  --lora: "Lora", serif;
+  --osans: "Open Sans", sans-serif;
+
+  /* sizing */
+  --font: 16px;
+}
+
+/* ***************************************** */
+
+/* ***BASE STYLES*** */
+*, body * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  background: var(--primaryColor);
+  font-family: var(--lora);
+  font-size: var(--font);
+  line-height: 40px;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  font-family: var(--osans);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ****************************************** */
+
+/* ***UTILITY CLASSES*** */
+.container {
+  position: relative;
+  height: inherit;
+  padding-right: 3.2rem;
+  padding-left: 3.2rem;
+}
+
+.container-fluid {
+  position: relative;
+  padding: 0;
+}
+
+/* ***************************************** */
+
+/* ***HEADER SECTION*** */
+header {
+  position: relative;
+  height: 6.4rem;
+}
+
+header .navigation li, header .navigation > a {
+  margin-left: 3rem;
+}
+
+header .navigation li a {
+  color: var(--secondaryColor);
+}
+
+header .navigation li a.active {
+  position: relative;
+  color: var(--active);
+}
+
+header .navigation li a.active::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: .4rem;
+  top: 110%;
+  left: 50%;
+  border-radius: .2rem;
+  background: var(--active);
+  transform: translateX(-50%);
+}
+
+header .navigation > a svg{
+  position: relative;
+  top: -2.5px;
+}
+
+header .navigation > a svg path{
+  fill: var(--secondaryColor);
+}
+
+/* *************************************************** */
+
+/* ***HERO SECTION*** */
+section.hero {
+  position: relative;
+  background: url(/assets/img/bg1.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 6.4rem);
+  color: var(--primaryColor);
+}
+
+section.hero .hero-text {
+  position: absolute;
+  width: 100%;
+  top: 14.2rem;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.hero h1{
+  margin: 0 auto 2.4rem;
+  width: 67.4%;
+  font-size: 3em;
+}
+
+section.hero p{
+  font-size: 1em;
+  margin: 0 auto 4.8rem;
+  width: 56.3%;
+  line-height: 1.5em;
+}
+
+section.hero .form-group {
+  max-width: 56.3%;
+  margin: 0 auto;
+}
+
+section.hero .input-group {
+  position: relative;
+  width: 57.6rem;
+}
+
+section.hero .input-group input {
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  height: 6rem;
+  padding: 2rem 0 2rem 5.6rem;
+  margin-right: 2.4rem;
+  border-radius: 8px;
+}
+
+section.hero .input-group svg {
+  position: absolute;
+  top: 50%;
+  left: 2.5rem;
+  transform: translateY(-50%);
+}
+
+section.hero .form-group button {
+  border-radius: 8px;
+  font-size: 1.5em;
+  width: 22.4rem;
+  height: 6rem;
+  background: var(--active);
+  color: var(--primaryColor);
+}
+
+/* ***************************************************** */
+
+/* ***BOOK COLLECTION SECTION*** */
+section.collection .collection-text {
+  padding: 24rem 10rem 0;
+  width: 49.2%;
+  background-image: url(/assets/img/Union.svg);
+  background-repeat: no-repeat;
+  background-position: calc(49.2vw - 361px) 86px;
+}
+
+section.collection .collection-text h2 {
+  font-size: 3em;
+  margin-bottom: 3.2rem;
+}
+
+section.collection .collection-text p {
+  color: var(--muted);
+  font-size: 1.5em;
+  margin-bottom: 4.8rem;
+}
+
+section.collection .collection-text a {
+  font-size: 1.5em;
+  color: var(--se);
+}
+
+section.collection .collection-image {
+  width: 50.8%;
+}
+
+section.collection .collection-image picture, section.collection .collection-image img {
+  width: 100%;
+}
+
+/* ***************************************************** */
+
+/* ***BOOK EXCHANGE SECTION*** */
+section.exchange .exchange-text {
+  padding: 24rem 10rem 0;
+  width: 50.8%;
+  background-image: url(/assets/img/Union2.svg);
+  background-repeat: no-repeat;
+  background-position: 0 86px;
+}
+
+section.exchange .exchange-text h2 {
+  font-size: 3em;
+  margin-bottom: 3.2rem;
+}
+
+section.exchange .exchange-text p {
+  color: var(--muted);
+  font-size: 1.5em;
+  margin-bottom: 4.8rem;
+}
+
+section.exchange .exchange-text a {
+  font-size: 1.5em;
+  color: var(--se);
+}
+
+section.exchange .exchange-image {
+  width: 49.2%;
+}
+
+section.exchange .exchange-image picture, section.exchange .exchange-image img {
+  width: 100%;
+}
+
+
+/* ***************************************************** */
+
+/* ***MEDIA QUERIES*** */
+
+/* ***LARGE TABLETS*** */
+
+@media screen and (max-width: 1200px) { 
+  section.hero h1 {
+    width: 90%;
+  }
+
+  section.hero p {
+    width: 85%;
+  }
+}
+
+/* ***SMALL TABLETS*** */
+
+@media screen and (max-width: 768px) {
+  /* variables */
+  :root {
+    --font: 12px;
+  }
+
+  /* ******** */
+
+  /* hero section for mobile view */
+  section.hero h1 {
+    width: 100%;
+  }
+
+  section.hero p {
+    width: 100%;
+  }
+
+  section.hero .form-group {
+    max-width: calc(100vw - 64px);
+  }
+
+  section.hero .input-group {
+    width: 100%;
+    margin-bottom: 2.4rem;
+  }
+
+  section.hero .input-group input {
+    margin: 0;
+    padding: 0.9rem 0 0.9rem 5.6rem;
+  }
+
+  section.hero .form-group button, section.hero .input-group input {
+    height: 4.8rem;
+  }
+
+  /*  */
+  section.collection .collection-text {
+    padding: 6.4rem 3.2rem 4.8rem;
+    width: 100%;
+    background-position: calc(100vw - 22.7rem) 25px;
+    background-size: 22.7rem 15.8rem;
+  }
+
+  section.collection .collection-image {
+    width: 100%;
+  } 
+
+  section.exchange .exchange-text {
+    padding: 6.4rem 3.2rem 4.8rem;
+    width: 100%;
+    background-position: 0 25px;
+    background-size: 22.7rem 15.8rem;
+  } 
+
+  section.exchange .exchange-image {
+    width: 100%;
+  } 
+}
+
+/* ***SMALL SCREENS*** */
+
+@media screen and (max-width: 576px) {
+  /* variables */
+  :root {
+    --font: 10px;
+  }
+
+  /* ******** */
+  
+  /* header for mobile view */
+  header nav {
+    position: absolute;
+    width: 100%;
+    height: 110vh;
+    background: var(--secondaryColor);
+    transform: translate(110%, 25%);
+    z-index: 3;
+  }
+
+  header nav .close-btn {
+    position: absolute;
+    top: 3.2rem;
+    right: 3.2rem;
+    border-radius: 0px;
+  }
+
+  header nav .navigation {
+    position: absolute;
+    top: 15rem;
+  }
+
+  header .navigation a, header .navigation li a {
+    color: var(--primaryColor);
+  }
+
+  header .navigation li {
+    margin-bottom: 3.2rem;
+  }
+  
+    header .navigation li a {
+      font-size: 3.2em;
+    }
+
+  header .navigation a {
+    font-size: 1.6em;
+  }
+
+  header .navigation a span{
+    margin-left: 1.4rem;
+  }
+
+  header .navigation > a svg path{
+    fill: var(--primaryColor);
+  }
+
+  /* class to open mobile menu */
+  .open {
+    display: block!important;
+    animation: slide 0.5s forwards;
+  }
+
+  /* ******* */
+
+  /* hero section for mobile view */
+  section.hero h1 {
+    font-size: 3.2em;
+    width: calc(100vw - 6.4rem);
+  }
+
+  section.hero p {
+    font-size: 1.6em;
+    width: calc(100vw - 6.4rem);
+  }
+}
+
+/* ************************************************ */
+
+/* ***KEYFRAMES*** */
+@keyframes slide {
+  from{
+    transform: translate(105%, -20%);
+  }
+  to {
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+  }
+}
